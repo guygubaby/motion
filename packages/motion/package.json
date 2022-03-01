@@ -15,7 +15,8 @@
   "scripts": {
     "dev": "pnpm build -- --watch",
     "build": "tsup",
-    "start": "esno src/index.ts"
+    "publish-pkg": "npm publish --access public",
+    "prepublishOnly": "pnpm build"
   },
   "keywords": [],
   "author": "",
