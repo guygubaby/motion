@@ -7,6 +7,7 @@ module.exports = {
   rules: {
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     'no-console': 'off',
+    'promise/param-names': 'off',
   },
   overrides: [
     {

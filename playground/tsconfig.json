@@ -14,7 +14,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "motion": ["../packages/motion/src/index.ts"]
+      "motion": ["../packages/motion/index.ts"]
     }
   },
   "include": [

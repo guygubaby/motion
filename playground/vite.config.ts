@@ -8,7 +8,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@/*': `${resolve(__dirname, 'src')}/*`,
-      'motion': resolve(__dirname, '../packages/motion/src/index.ts'),
+      'motion': resolve(__dirname, '../packages/motion/index.ts'),
     },
   },
   plugins: [
@@ -17,8 +17,5 @@ export default defineConfig({
       presets: [presetUno()],
     }),
   ],
-  server: {
-    port: 8080,
-  },
   optimizeDeps: {},
 })

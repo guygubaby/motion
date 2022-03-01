@@ -1,4 +1,4 @@
-import { Options } from 'tsup'
+import type { Options } from 'tsup'
 
 const options: Options = {
   splitting: false,
@@ -7,9 +7,9 @@ const options: Options = {
   format: ['cjs', 'esm'],
   dts: true,
   entryPoints: [
-    'src/index.ts',
+    './index.ts',
   ],
-  external: [],
+  external: ['vue'],
 }
 
 export default options

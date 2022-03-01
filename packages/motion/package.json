@@ -1,7 +1,7 @@
 {
   "name": "@bryce-loskie/motion",
   "version": "0.0.0",
-  "description": "",
+  "description": "Animation library for the Vue.js 3.x framework",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -19,5 +19,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  }
 }

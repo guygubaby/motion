@@ -5,16 +5,20 @@ importers:
   .:
     specifiers:
       '@bryce-loskie/eslint-config': ^1.0.6
+      '@bryce-loskie/utils': ^0.1.21
       '@types/jest': ^27.4.1
       '@types/node': ^17.0.20
       '@vitejs/plugin-vue': ^2.2.2
+      '@vue/reactivity': ^3.2.31
       bumpp: ^7.1.1
       eslint: ^8.9.0
       eslint-plugin-jest: ^26.1.1
       esno: ^0.14.1
       jest: ^27.5.1
       prettier: ^2.5.1
+      svelte: ^3.46.4
       ts-jest: ^27.1.3
+      tsconfig-paths: ^3.12.0
       tsup: ^5.11.13
       typescript: ^4.5.5
       unocss: ^0.26.2
@@ -22,16 +26,20 @@ importers:
       vue: ^3.2.31
     devDependencies:
       '@bryce-loskie/eslint-config': 1.0.6_eslint@8.9.0+typescript@4.5.5
+      '@bryce-loskie/utils': 0.1.21
       '@types/jest': 27.4.1
       '@types/node': 17.0.20
       '@vitejs/plugin-vue': 2.2.2_vite@2.8.4+vue@3.2.31
+      '@vue/reactivity': 3.2.31
       bumpp: 7.1.1
       eslint: 8.9.0
       eslint-plugin-jest: 26.1.1_e40de970075d4d5a10c059e5371fff87
       esno: 0.14.1
       jest: 27.5.1
       prettier: 2.5.1
+      svelte: 3.46.4
       ts-jest: 27.1.3_8fa130d172bf7d71653f05507c50c5a3
+      tsconfig-paths: 3.12.0
       tsup: 5.11.13_typescript@4.5.5
       typescript: 4.5.5
       unocss: 0.26.2
@@ -474,6 +482,12 @@ packages:
     transitivePeerDependencies:
       - supports-color
       - typescript
+    dev: true
+
+  /@bryce-loskie/utils/0.1.21:
+    resolution: {integrity: sha512-K8m6XtDJuHlZUl0I1na/LqqBC/E478mOZyUuTZ8rGkwUBU1KlMndHZ/vqFx2/5U0ujQsorF6jvSJaQ19wR9B6w==}
+    dependencies:
+      '@types/throttle-debounce': 2.1.0
     dev: true
 
   /@eslint/eslintrc/1.1.0:
@@ -4825,6 +4839,11 @@ packages:
   /supports-preserve-symlinks-flag/1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+    dev: true
+
+  /svelte/3.46.4:
+    resolution: {integrity: sha512-qKJzw6DpA33CIa+C/rGp4AUdSfii0DOTCzj/2YpSKKayw5WGSS624Et9L1nU1k2OVRS9vaENQXp2CVZNU+xvIg==}
+    engines: {node: '>= 8'}
     dev: true
 
   /symbol-tree/3.2.4:
