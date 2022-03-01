@@ -1,6 +1,6 @@
 {
   "name": "motion-monorepo",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "motion-monorepo",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,8 @@
     "build:play": "pnpm -C playground run build",
     "release": "bumpp package.json packages/*/package.json --commit --push --tag",
     "test": "jest",
-    "test:update": "jest -u"
+    "test:update": "jest -u",
+    "prepublishOnly": "pnpm build"
   },
   "keywords": [],
   "author": "",
