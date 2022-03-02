@@ -1,6 +1,7 @@
 import { spring } from 'svelte/motion'
 import type { Ref } from 'vue'
 import { customRef, shallowRef, unref } from 'vue'
+import type { MaybeRef } from './types'
 import { tryOnScopeDispose } from './utils'
 
 interface SpringOpts {
@@ -11,7 +12,7 @@ interface SpringOpts {
 
 export { spring }
 
-export const useSpring = <T=any>(value: Ref<T> | T, opts: SpringOpts = {}) => {
+export const useSpring = <T=any>(value: MaybeRef<T>, opts: SpringOpts = {}): Ref<T> => {
   const dummy = shallowRef(unref(value))
   const sub = spring(dummy.value, opts)
   const unsub = sub.subscribe(val => dummy.value = val)
