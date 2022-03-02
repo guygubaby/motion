@@ -1,9 +1,9 @@
-import type { ComputedRef, Ref, UnwrapRef } from 'vue'
-import { computed, ref, watch } from 'vue'
+import type { Ref } from 'vue'
+import { customRef, shallowRef, unref } from 'vue'
 import { tweened } from 'svelte/motion'
 import { tryOnScopeDispose } from './utils'
 
-export { tweened } from 'svelte/motion'
+export { tweened }
 
 export interface TweenedOptions<T> {
   delay?: number
@@ -12,21 +12,24 @@ export interface TweenedOptions<T> {
   interpolate?: (a: T, b: T) => (t: number) => T
 }
 
-export function useTweened<T>(source: Ref<T> | ComputedRef<T>, defaults: TweenedOptions<T> = {}): Ref<UnwrapRef<T>> {
-  const sourceValue = computed(() => source.value)
-  const outValue = ref<T>(source.value)
+export function useTweened<T>(source: Ref<T> | T, opts: TweenedOptions<T> = {}): Ref<T> {
+  const dummy = shallowRef(unref(source))
+  const sub = tweened(dummy.value, opts)
+  const unsub = sub.subscribe(val => dummy.value = val)
+  tryOnScopeDispose(unsub)
 
-  const sub = tweened(sourceValue.value, defaults)
-  // @ts-ignore
-  const unsubscribe = sub.subscribe(val => outValue.value = val)
-
-  watch(sourceValue, (val) => {
-    sub.set(val)
-  }, {
-    immediate: true,
+  const outValue = customRef<T>((track, trigger) => {
+    return {
+      get() {
+        track()
+        return dummy.value
+      },
+      set(val) {
+        sub.set(val)
+        trigger()
+      },
+    }
   })
-
-  tryOnScopeDispose(unsubscribe)
 
   return outValue
 }

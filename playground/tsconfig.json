@@ -1,27 +1,26 @@
 {
-  "extends": "../tsconfig.json",
   "compilerOptions": {
-    "target": "esnext",
-    "useDefineForClassFields": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "strict": true,
-    "jsx": "preserve",
-    "sourceMap": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "lib": ["esnext", "dom"],
     "baseUrl": ".",
+    "module": "ESNext",
+    "target": "es2016",
+    "lib": ["DOM", "ESNext"],
+    "jsx": "preserve",
+    "strict": true,
+    "esModuleInterop": true,
+    "incremental": false,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noImplicitAny": false,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["vite/client", "vite-plugin-vue-layouts/client"],
     "paths": {
       "@/*": ["src/*"],
+      "*": ["src/*.d.ts", "*.d.ts"],
       "motion": ["../packages/motion/src/index.ts"]
     }
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "*.d.ts"
-  ]
+  "exclude": ["dist", "node_modules"]
 }

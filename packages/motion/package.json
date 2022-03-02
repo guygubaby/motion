@@ -13,11 +13,6 @@
       "require": "./dist/index.js",
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
-    },
-    "./tweened": {
-      "require": "./dist/tweened.js",
-      "import": "./dist/tweened.mjs",
-      "types": "./dist/tweened.d.ts"
     }
   },
   "funding": "https://github.com/sponsors/guygubaby",
@@ -33,8 +28,7 @@
   },
   "sideEffects": false,
   "files": [
-    "dist",
-    "tweened.d.ts"
+    "dist"
   ],
   "scripts": {
     "dev": "pnpm build -- --watch",

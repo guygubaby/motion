@@ -4,6 +4,7 @@ import Vue from '@vitejs/plugin-vue'
 import { presetUno } from 'unocss'
 import Unocss from 'unocss/vite'
 import Pages from 'vite-plugin-pages'
+import Layouts from 'vite-plugin-vue-layouts'
 
 export default defineConfig({
   resolve: {
@@ -13,6 +14,7 @@ export default defineConfig({
     },
   },
   plugins: [
+    Layouts(),
     Pages(),
     Vue(),
     Unocss({
