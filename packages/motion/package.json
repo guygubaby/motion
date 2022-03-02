@@ -33,7 +33,8 @@
   },
   "sideEffects": false,
   "files": [
-    "dist"
+    "dist",
+    "tweened.d.ts"
   ],
   "scripts": {
     "dev": "pnpm build -- --watch",
