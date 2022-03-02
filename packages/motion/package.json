@@ -1,17 +1,40 @@
 {
   "name": "@bryce-loskie/motion",
   "version": "0.0.1",
-  "description": "Animation library for the Vue.js 3.x framework",
+  "description": "Animation library for the browser and Vue",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "require": "./dist/index.js",
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
+    },
+    "./tweened": {
+      "require": "./dist/tweened.js",
+      "import": "./dist/tweened.mjs",
+      "types": "./dist/tweened.d.ts"
     }
   },
+  "funding": "https://github.com/sponsors/guygubaby",
+  "author": "guygubaby <guygubaby@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guygubaby/motion/issues"
+  },
+  "homepage": "https://github.com/guygubaby/motion#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guygubaby/motion.git"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "pnpm build -- --watch",
     "build": "tsup",
@@ -19,8 +42,6 @@
     "prepublishOnly": "pnpm build"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
   "peerDependencies": {
     "vue": "^3.0.0"
   }

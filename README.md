@@ -1,4 +1,4 @@
-# Opinionated animation plugin for Vue 3.x
+# Opinionated animation plugin for the browser and Vue
 
 [![NPM version](https://img.shields.io/npm/v/@bryce-loskie/motion?color=a1b858&label=)](https://www.npmjs.com/package/@bryce-loskie/motion)
 

@@ -7,8 +7,10 @@ const options: Options = {
   format: ['cjs', 'esm'],
   dts: true,
   entryPoints: [
-    './index.ts',
+    './src/index.ts',
+    './src/tweened.ts',
   ],
+  outDir: 'dist',
   external: ['vue'],
 }
 
