@@ -19,10 +19,10 @@
 </template>
 
 <script lang="ts" setup>
-import { cubicOut, useTweened } from 'motion'
+import { EasingPresets, useTweened } from 'motion'
 
 const progress = useTweened(0, {
-  easing: cubicOut,
+  easing: EasingPresets.circOut,
 })
 
 const set = (value: number) => {

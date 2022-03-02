@@ -27,14 +27,5 @@ const prefix = 'https://github.com/guygubaby/motion/blob/main/playground/src/pag
 
 const routeItem = useRoute()
 
-const getMatchFile = () => {
-  // @ts-ignore
-  const item = routeItem.matched[routeItem.matched.length - 1]?.components?.default?.__file as string
-  if (!item) return prefix
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [_, file] = item.split('src/pages')
-  return prefix + file
-}
-
-const srouceUrl = computed(() => getMatchFile())
+const srouceUrl = computed(() => `${prefix}${routeItem.path}/index.vue`)
 </script>
