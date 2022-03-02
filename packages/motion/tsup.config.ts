@@ -8,7 +8,6 @@ const options: Options = {
   dts: true,
   entryPoints: [
     './src/index.ts',
-    './src/tweened.ts',
   ],
   outDir: 'dist',
   external: ['vue'],
