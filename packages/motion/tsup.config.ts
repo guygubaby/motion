@@ -10,7 +10,7 @@ const options: Options = {
     './src/index.ts',
   ],
   outDir: 'dist',
-  external: ['vue'],
+  external: [],
 }
 
 export default options

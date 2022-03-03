@@ -37,6 +37,9 @@
     "prepublishOnly": "pnpm build"
   },
   "keywords": [],
+  "dependencies": {
+    "vue-demi": "latest"
+  },
   "peerDependencies": {
     "@vue/composition-api": "^1.4.1",
     "vue": "^2.0.0 || >=3.0.0"
