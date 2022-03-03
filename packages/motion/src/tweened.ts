@@ -19,7 +19,7 @@ export function useTweened<T>(source: MaybeRef<T>, opts: TweenedOptions<T> = {})
   const unsub = sub.subscribe(val => dummy.value = val)
   tryOnScopeDispose(unsub)
 
-  const outValue = customRef<T>((track, trigger) => {
+  return customRef<T>((track, trigger) => {
     return {
       get() {
         track()
@@ -31,6 +31,4 @@ export function useTweened<T>(source: MaybeRef<T>, opts: TweenedOptions<T> = {})
       },
     }
   })
-
-  return outValue
 }

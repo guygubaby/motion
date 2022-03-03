@@ -2,17 +2,25 @@
   <div class="flex flex-col">
     <progress class="w-full" :value="progress" />
 
-    <div class="flex mt-5vh justify-center">
-      <button @click="set(0)">
+    <div class="flex gap-2 mt-5vh justify-center">
+      <button @click="minus">
+        -
+      </button>
+
+      <button @click="progress = 0">
         0%
       </button>
 
-      <button class="mx-2" @click="set(0.5)">
+      <button @click="progress = 0.5">
         50%
       </button>
 
-      <button @click="set(1)">
+      <button @click="progress = 1">
         100%
+      </button>
+
+      <button @click="plus">
+        +
       </button>
     </div>
   </div>
@@ -25,7 +33,11 @@ const progress = useTweened(0, {
   easing: EasingPresets.circOut,
 })
 
-const set = (value: number) => {
-  progress.value = value
+const minus = () => {
+  progress.value = Math.max ((progress.value - 0.1), 0)
+}
+
+const plus = () => {
+  progress.value = Math.min ((progress.value + 0.1), 1)
 }
 </script>

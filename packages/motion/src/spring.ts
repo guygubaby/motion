@@ -18,7 +18,7 @@ export const useSpring = <T=any>(value: MaybeRef<T>, opts: SpringOpts = {}): Ref
   const unsub = sub.subscribe(val => dummy.value = val)
   tryOnScopeDispose(unsub)
 
-  const outValue = customRef<T>((track, trigger) => {
+  return customRef<T>((track, trigger) => {
     return {
       get() {
         track()
@@ -30,6 +30,4 @@ export const useSpring = <T=any>(value: MaybeRef<T>, opts: SpringOpts = {}): Ref
       },
     }
   })
-
-  return outValue
 }
