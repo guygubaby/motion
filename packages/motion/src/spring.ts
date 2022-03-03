@@ -1,6 +1,6 @@
 import { spring } from 'svelte/motion'
-import type { Ref } from 'vue'
-import { customRef, shallowRef, unref } from 'vue'
+import type { Ref } from 'vue-demi'
+import { customRef, shallowRef, unref } from 'vue-demi'
 import type { MaybeRef } from './types'
 import { tryOnScopeDispose } from './utils'
 

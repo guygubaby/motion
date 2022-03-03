@@ -44,6 +44,7 @@
     "vite-plugin-pages": "^0.21.0",
     "vite-plugin-vue-layouts": "^0.6.0",
     "vue": "^3.2.31",
+    "vue-demi": "^0.12.1",
     "vue-router": "^4.0.13"
   }
 }

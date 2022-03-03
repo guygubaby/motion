@@ -33,6 +33,6 @@ type PresetNames =
   |'sineInOut'
   |'sineOut'
 
-type EasingFn = (value: number) => any
+type EasingFn = (t: number) => number
 
 export const EasingPresets: Record<PresetNames, EasingFn> = easingFunc

@@ -1,5 +1,5 @@
-import type { Ref } from 'vue'
-import { customRef, shallowRef, unref } from 'vue'
+import type { Ref } from 'vue-demi'
+import { customRef, shallowRef, unref } from 'vue-demi'
 import { tweened } from 'svelte/motion'
 import { tryOnScopeDispose } from './utils'
 import type { MaybeRef } from './types'
