@@ -11,8 +11,7 @@
 
       <component :is="Component" :key="route" />
 
-      <hr>
-      <div>
+      <div class="mt-6">
         <a target="_blank" :href="srouceUrl">Source</a>
       </div>
     </router-view>
