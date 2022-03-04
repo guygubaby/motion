@@ -20,5 +20,5 @@ MIT License © 2021 [guygubaby](https://github.com/guygubaby)
 
 - [svelte](https://svelte.dev/)
 - [gsap](https://www.npmjs.com/package/gsap)
-- [animejs](https://www.npmjs.com/package/animejs)
+- [vueuse/motion](https://github.com/vueuse/motion)
 - [scrollmagic](https://www.npmjs.com/package/scrollmagic)
