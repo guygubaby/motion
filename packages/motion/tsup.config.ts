@@ -8,6 +8,10 @@ const options: Options = {
   dts: true,
   entryPoints: [
     './src/index.ts',
+    './src/spring.ts',
+    './src/tweened.ts',
+    './src/easing.ts',
+    './src/animate.ts',
   ],
   outDir: 'dist',
   external: [],

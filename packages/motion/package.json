@@ -13,6 +13,26 @@
       "require": "./dist/index.js",
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
+    },
+    "./animate": {
+      "require": "./dist/animate.js",
+      "import": "./dist/animate.mjs",
+      "types": "./dist/animate.d.ts"
+    },
+    "./easing": {
+      "require": "./dist/easing.js",
+      "import": "./dist/easing.mjs",
+      "types": "./dist/easing.d.ts"
+    },
+    "./spring": {
+      "require": "./dist/spring.js",
+      "import": "./dist/spring.mjs",
+      "types": "./dist/spring.d.ts"
+    },
+    "./tweened": {
+      "require": "./dist/tweened.js",
+      "import": "./dist/tweened.mjs",
+      "types": "./dist/tweened.d.ts"
     }
   },
   "funding": "https://github.com/sponsors/guygubaby",
@@ -24,11 +44,16 @@
   "homepage": "https://github.com/guygubaby/motion#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/guygubaby/motion.git"
+    "url": "git+https://github.com/guygubaby/motion.git",
+    "directory": "packages/motion"
   },
   "sideEffects": false,
   "files": [
-    "dist"
+    "dist",
+    "animate.d.ts",
+    "easing.d.ts",
+    "spring.d.ts",
+    "tweened.d.ts"
   ],
   "scripts": {
     "dev": "pnpm build -- --watch",
@@ -36,7 +61,14 @@
     "publish-pkg": "npm publish --access public",
     "prepublishOnly": "pnpm build"
   },
-  "keywords": [],
+  "keywords": [
+    "vue",
+    "animation",
+    "motion",
+    "tweened",
+    "easing",
+    "spring"
+  ],
   "dependencies": {
     "vue-demi": "latest"
   },

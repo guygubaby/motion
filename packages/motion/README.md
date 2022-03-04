@@ -1,8 +1,6 @@
-# Opinionated motion util for the web, based on svelte animation system
+# Opinionated motion util for the web
 
 [![NPM version](https://img.shields.io/npm/v/@bryce-loskie/motion?color=a1b858&label=)](https://www.npmjs.com/package/@bryce-loskie/motion)
-
-## Based on [svelte](https://github.com/sveltejs/svelte) animation system
 
 ## Get Started
 
@@ -17,3 +15,10 @@ coming soon ~
 ## License
 
 MIT License © 2021 [guygubaby](https://github.com/guygubaby)
+
+## References
+
+- [svelte](https://svelte.dev/)
+- [gsap](https://www.npmjs.com/package/gsap)
+- [animejs](https://www.npmjs.com/package/animejs)
+- [scrollmagic](https://www.npmjs.com/package/scrollmagic)
