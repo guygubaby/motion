@@ -9,7 +9,7 @@
         {{ route.name }}
       </h3>
 
-      <component :is="Component" :key="route" />
+      <component :is="Component" :key="route.path" />
 
       <div class="mt-6">
         <a target="_blank" :href="srouceUrl">Source</a>
