@@ -1,4 +1,3 @@
-
 import type { MotionInstance, MotionVariants } from '@vueuse/motion'
 import { useMotion } from '@vueuse/motion'
 import type { Directive, DirectiveBinding } from 'vue-demi'
@@ -22,7 +21,7 @@ export const defineDirective = (variants?: MotionVariants): Directive<HTMLElemen
     binding: DirectiveBinding,
   ) => {
     // Get instance key if possible (binding value or element key in case of v-for's)
-    const key = Object.keys(binding.modifiers).join('-')
+    const key = Object.keys(binding.modifiers).join('.')
 
     // Cleanup previous motion instance if it exists
     if (key && motionState[key]) motionState[key].stop()
