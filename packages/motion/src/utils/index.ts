@@ -1,5 +1,5 @@
-import type { Fn } from '@bryce-loskie/utils'
 import { getCurrentScope, onScopeDispose } from 'vue-demi'
+import type { Fn } from '../types'
 
 export const tryOnScopeDispose = (fn: Fn) => {
   const scope = getCurrentScope()

@@ -10,5 +10,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@bryce-loskie/motion": "workspace:^0.0.7"
+  }
 }

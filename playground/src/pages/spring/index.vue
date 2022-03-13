@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useSpring } from 'motion'
+import { useSpring } from '@bryce-loskie/motion'
 import { ref } from 'vue'
 
 const svgRef = ref<Nullable<HTMLElement>>(null)

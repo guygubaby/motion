@@ -1,0 +1,6 @@
+{
+  "extends": "../../tsconfig.json",
+  "files": [
+    "node_modules/gsap/types/index.d.ts"
+  ]
+}

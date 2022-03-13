@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-import { defineGsapTimelineDirective, defineTweenVars, useGsapInstance, useGsapTimeline } from 'motion'
+import { defineGsapTimelineDirective, defineTweenVars, useGsapInstance, useGsapTimeline } from '@bryce-loskie/motion'
 import { onMounted, ref } from 'vue'
 
 const rectRef = ref<Nullable<SVGRectElement>>(null)

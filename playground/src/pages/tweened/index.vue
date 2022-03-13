@@ -27,7 +27,7 @@
 </template>
 
 <script lang="ts" setup>
-import { EasingPresets, useTweened } from 'motion'
+import { EasingPresets, useTweened } from '@bryce-loskie/motion'
 
 const progress = useTweened(0, {
   easing: EasingPresets.circOut,

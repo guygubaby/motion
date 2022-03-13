@@ -10,7 +10,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@/*': `${resolve(__dirname, 'src')}/*`,
-      'motion': resolve(__dirname, '../packages/motion/src/index.ts'),
+      // 'motion': resolve(__dirname, '../packages/motion/src/index.ts'),
     },
   },
   plugins: [

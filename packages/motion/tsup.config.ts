@@ -15,7 +15,13 @@ const options: Options = {
     './src/gsap.ts',
   ],
   outDir: 'dist',
-  external: [],
+  external: [
+    'vue',
+    'vue-demi',
+    'svelte',
+    'gsap',
+    '@vueuse/motion',
+  ],
 }
 
 export default options

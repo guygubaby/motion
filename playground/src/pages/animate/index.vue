@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts" setup>
-import { defineDirective, defineVariants, useMotion, useMotionInstance } from 'motion'
+import { defineDirective, defineVariants, useMotion, useMotionInstance } from '@bryce-loskie/motion'
 import { ref } from 'vue'
 
 const variants = defineVariants({

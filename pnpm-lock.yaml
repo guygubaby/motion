@@ -10,17 +10,14 @@ importers:
       '@types/node': ^17.0.20
       '@types/prismjs': ^1.26.0
       '@vitejs/plugin-vue': ^2.2.2
-      '@vueuse/motion': ^2.0.0-beta.9
       bumpp: ^7.1.1
       eslint: ^8.9.0
       eslint-plugin-jest: ^26.1.1
       esno: ^0.14.1
-      gsap: ^3.9.1
       jest: ^27.5.1
       prettier: ^2.5.1
       prismjs: ^1.27.0
       sass: ^1.49.9
-      svelte: ^3.46.4
       ts-jest: ^27.1.3
       tsup: ^5.11.13
       typescript: ^4.5.5
@@ -37,17 +34,14 @@ importers:
       '@types/node': 17.0.20
       '@types/prismjs': 1.26.0
       '@vitejs/plugin-vue': 2.2.2_vite@2.8.4+vue@3.2.31
-      '@vueuse/motion': 2.0.0-beta.9_vue@3.2.31
       bumpp: 7.1.1
       eslint: 8.9.0
       eslint-plugin-jest: 26.1.1_e40de970075d4d5a10c059e5371fff87
       esno: 0.14.1
-      gsap: 3.9.1
       jest: 27.5.1
       prettier: 2.5.1
       prismjs: 1.27.0
       sass: 1.49.9
-      svelte: 3.46.4
       ts-jest: 27.1.3_8fa130d172bf7d71653f05507c50c5a3
       tsup: 5.11.13_typescript@4.5.5
       typescript: 4.5.5
@@ -60,12 +54,23 @@ importers:
 
   packages/motion:
     specifiers:
+      '@bryce-loskie/utils': ^0.1.21
+      '@vueuse/motion': ^2.0.0-beta.9
+      gsap: ^3.9.1
+      svelte: ^3.46.4
       vue-demi: latest
     dependencies:
+      '@bryce-loskie/utils': 0.1.21
+      '@vueuse/motion': 2.0.0-beta.9_vue@3.2.31
+      gsap: 3.9.1
+      svelte: 3.46.4
       vue-demi: 0.12.1_vue@3.2.31
 
   playground:
-    specifiers: {}
+    specifiers:
+      '@bryce-loskie/motion': workspace:^0.0.7
+    dependencies:
+      '@bryce-loskie/motion': link:../packages/motion
 
 packages:
 
@@ -509,7 +514,6 @@ packages:
     resolution: {integrity: sha512-K8m6XtDJuHlZUl0I1na/LqqBC/E478mOZyUuTZ8rGkwUBU1KlMndHZ/vqFx2/5U0ujQsorF6jvSJaQ19wR9B6w==}
     dependencies:
       '@types/throttle-debounce': 2.1.0
-    dev: true
 
   /@eslint/eslintrc/1.1.0:
     resolution: {integrity: sha512-C1DfL7XX4nPqGd6jcP01W9pVM1HYCuUkFk1432D7F0v3JSlUIeOYn9oCoi3eoLZ+iwBSb29BMFxxny0YrrEZqg==}
@@ -941,7 +945,6 @@ packages:
 
   /@types/throttle-debounce/2.1.0:
     resolution: {integrity: sha512-5eQEtSCoESnh2FsiLTxE121IiE60hnMqcb435fShf4bpLRjEu1Eoekht23y6zXS9Ts3l+Szu3TARnTsA0GkOkQ==}
-    dev: true
 
   /@types/yargs-parser/20.2.1:
     resolution: {integrity: sha512-7tFImggNeNBVMsn0vLrpn1H1uPrUBdnARPTpZoitY37ZrdJREzf7I16tMrlK3hen349gr1NYh8CmZQa7CTG6Aw==}
@@ -1339,7 +1342,7 @@ packages:
       '@vueuse/shared': 7.7.0_vue@3.2.31
       vue: 3.2.31
       vue-demi: 0.12.1_vue@3.2.31
-    dev: true
+    dev: false
 
   /@vueuse/motion/2.0.0-beta.9_vue@3.2.31:
     resolution: {integrity: sha512-S61glJRkYCqLJA9oPM+jdAWXM/ZFnRi6UZJ0TpxDUhRuA+ri0G5hwwmcy4y78wvX6gkDUGQFFGELz1xBEwrZww==}
@@ -1354,7 +1357,7 @@ packages:
       popmotion: 11.0.3
       vue: 3.2.31
       vue-demi: 0.12.1_vue@3.2.31
-    dev: true
+    dev: false
 
   /@vueuse/shared/7.7.0_vue@3.2.31:
     resolution: {integrity: sha512-ANzMcUnjuUPJ9nWqMAqYt8p0qon6AH5pP5/V/0RSWkwCIWZwi57ujIaxizzMwnJECUF/73BmsRmpvvtokCIrKw==}
@@ -1369,7 +1372,7 @@ packages:
     dependencies:
       vue: 3.2.31
       vue-demi: 0.12.1_vue@3.2.31
-    dev: true
+    dev: false
 
   /abab/2.0.5:
     resolution: {integrity: sha512-9IK9EadsbHo6jLWIpxpR6pL0sazTXV6+SQv25ZB+F7Bj9mJNaOc4nCRabwd5M/JwmUa8idz6Eci6eKfJryPs6Q==}
@@ -2947,7 +2950,7 @@ packages:
     resolution: {integrity: sha512-fUY88kXvGiIItgNC7wcTOl0SNRCVXMKSWW2Yzfmn7EKNc+MpCzcz9DhdHcdjbrtN3c6R4H5dTY2jiCpPdysEjA==}
     dependencies:
       tslib: 2.3.1
-    dev: true
+    dev: false
 
   /fs.realpath/1.0.0:
     resolution: {integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=}
@@ -3075,7 +3078,7 @@ packages:
 
   /gsap/3.9.1:
     resolution: {integrity: sha512-JSGVYoC6da4pIjdF/yxFU6Rz8OojOIDkbooveZlfNg0+JIoFoRruyfWAEi6R/gUeNcuOiTqUIb0gi1nCNrHf8w==}
-    dev: true
+    dev: false
 
   /gzip-size/6.0.0:
     resolution: {integrity: sha512-ax7ZYomf6jqPTQ4+XCpUGyXKHk5WweS+e05MBO4/y3WJ5RkmPXNKvX+bx1behVILVwr6JSQvZAku021CHPXG3Q==}
@@ -3119,7 +3122,7 @@ packages:
 
   /hey-listen/1.0.8:
     resolution: {integrity: sha512-COpmrF2NOg4TBWUJ5UVyaCU2A88wEMkUPK4hNqyCkqHbxT92BbvfjoSozkAIIm6XhicGlJHhFdullInrdhwU8Q==}
-    dev: true
+    dev: false
 
   /hosted-git-info/2.8.9:
     resolution: {integrity: sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==}
@@ -4561,7 +4564,7 @@ packages:
       hey-listen: 1.0.8
       style-value-types: 5.0.0
       tslib: 2.3.1
-    dev: true
+    dev: false
 
   /postcss-load-config/3.1.3:
     resolution: {integrity: sha512-5EYgaM9auHGtO//ljHH+v/aC/TQ5LHXtL7bQajNAUBKUVKiYE8rYpFms7+V26D9FncaGe2zwCoPQsFKb5zF/Hw==}
@@ -5008,7 +5011,7 @@ packages:
     dependencies:
       hey-listen: 1.0.8
       tslib: 2.3.1
-    dev: true
+    dev: false
 
   /sucrase/3.20.3:
     resolution: {integrity: sha512-azqwq0/Bs6RzLAdb4dXxsCgMtAaD2hzmUr4UhSfsxO46JFPAwMnnb441B/qsudZiS6Ylea3JXZe3Q497lsgXzQ==}
@@ -5060,7 +5063,7 @@ packages:
   /svelte/3.46.4:
     resolution: {integrity: sha512-qKJzw6DpA33CIa+C/rGp4AUdSfii0DOTCzj/2YpSKKayw5WGSS624Et9L1nU1k2OVRS9vaENQXp2CVZNU+xvIg==}
     engines: {node: '>= 8'}
-    dev: true
+    dev: false
 
   /symbol-tree/3.2.4:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
@@ -5209,7 +5212,7 @@ packages:
 
   /tslib/2.3.1:
     resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
-    dev: true
+    dev: false
 
   /tsup/5.11.13_typescript@4.5.5:
     resolution: {integrity: sha512-NVMK01gVmojZn7+iZwxRK1CzW2BIabaVMyEjs7Nm9lm4DrSf7IAqs2F3fg0vT7rH72x1cIBsW9U/TlWrCvHVQQ==}
@@ -5500,6 +5503,7 @@ packages:
         optional: true
     dependencies:
       vue: 3.2.31
+    dev: false
 
   /vue-eslint-parser/7.11.0_eslint@8.9.0:
     resolution: {integrity: sha512-qh3VhDLeh773wjgNTl7ss0VejY9bMMa0GoDG2fQVyDzRFdiU3L7fw74tWZDHNQXdZqxO3EveQroa9ct39D2nqg==}
