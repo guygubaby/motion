@@ -12,6 +12,7 @@ const options: Options = {
     './src/tweened.ts',
     './src/easing.ts',
     './src/animate.ts',
+    './src/gsap.ts',
   ],
   outDir: 'dist',
   external: [],
