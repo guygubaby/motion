@@ -22,3 +22,10 @@ MIT License © 2021 [guygubaby](https://github.com/guygubaby)
 - [gsap](https://www.npmjs.com/package/gsap)
 - [vueuse/motion](https://github.com/vueuse/motion)
 - [scrollmagic](https://www.npmjs.com/package/scrollmagic)
+
+## Caveats
+
+```bash
+pnpm -r publish [folder] --access public # pnpm publish packages inside [folder]
+pnpm -C [folder] i [local-pkg] # pnpm install local package in target [folder] explicit
+```
