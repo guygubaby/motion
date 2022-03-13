@@ -23,7 +23,7 @@ MIT License © 2021 [guygubaby](https://github.com/guygubaby)
 - [vueuse/motion](https://github.com/vueuse/motion)
 - [scrollmagic](https://www.npmjs.com/package/scrollmagic)
 
-## Caveats
+## Notes
 
 ```bash
 pnpm -r publish [folder] --access public # pnpm publish packages inside [folder]
