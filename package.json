@@ -1,6 +1,6 @@
 {
   "name": "motion-monorepo",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "motion-monorepo",
   "main": "index.js",
   "private": true,
@@ -11,7 +11,6 @@
     "lint:fix": "pnpm lint -- --fix",
     "play": "pnpm -C playground run dev",
     "build:play": "pnpm -C playground run build",
-    "publish-pkg": "pnpm -C packages/motion publish-pkg -- --access public",
     "release": "bumpp package.json packages/*/package.json --commit --push --tag",
     "test": "jest",
     "test:update": "jest -u"

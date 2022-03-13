@@ -1,6 +1,6 @@
 {
   "name": "@bryce-loskie/motion",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Opinionated motion util for the web, based on svelte animation system",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -53,12 +53,12 @@
     "animate.d.ts",
     "easing.d.ts",
     "spring.d.ts",
-    "tweened.d.ts"
+    "tweened.d.ts",
+    "gsap.d.ts"
   ],
   "scripts": {
     "dev": "pnpm build -- --watch",
     "build": "tsup",
-    "publish-pkg": "npm publish --access public",
     "prepublishOnly": "pnpm build"
   },
   "keywords": [
@@ -67,7 +67,8 @@
     "motion",
     "tweened",
     "easing",
-    "spring"
+    "spring",
+    "gsap"
   ],
   "dependencies": {
     "vue-demi": "latest"
