@@ -1,6 +1,6 @@
 {
   "name": "@bryce-loskie/motion",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Opinionated motion util for the web, based on svelte animation system",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -33,6 +33,11 @@
       "require": "./dist/tweened.js",
       "import": "./dist/tweened.mjs",
       "types": "./dist/tweened.d.ts"
+    },
+    "./gsap": {
+      "require": "./dist/gsap.js",
+      "import": "./dist/gsap.mjs",
+      "types": "./dist/gsap.d.ts"
     }
   },
   "funding": "https://github.com/sponsors/guygubaby",
