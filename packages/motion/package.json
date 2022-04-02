@@ -1,7 +1,7 @@
 {
   "name": "@bryce-loskie/motion",
-  "version": "0.1.1",
-  "description": "Opinionated motion util for the web, based on svelte animation system",
+  "version": "0.1.2",
+  "description": "Opinionated motion util for the web",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
