@@ -1,6 +1,6 @@
 {
   "name": "@bryce-loskie/motion",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Opinionated motion util for the web, based on svelte animation system",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -80,9 +80,6 @@
   },
   "peerDependencies": {
     "@vue/composition-api": "^1.4.1",
-    "svelte": "^3.46.4",
-    "@vueuse/motion": "^2.0.0-beta.9",
-    "gsap": "^3.9.1",
     "vue": "^2.0.0 || >=3.0.0",
     "vue-demi": "latest"
   },
