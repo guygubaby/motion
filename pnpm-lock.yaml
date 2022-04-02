@@ -64,11 +64,11 @@ importers:
       '@vueuse/motion': 2.0.0-beta.9_vue@3.2.31
       gsap: 3.9.1
       svelte: 3.46.4
-      vue-demi: 0.12.1_vue@3.2.31
+      vue-demi: 0.12.5_vue@3.2.31
 
   playground:
     specifiers:
-      '@bryce-loskie/motion': workspace:^0.0.7
+      '@bryce-loskie/motion': workspace:*
     dependencies:
       '@bryce-loskie/motion': link:../packages/motion
 
@@ -1341,7 +1341,7 @@ packages:
     dependencies:
       '@vueuse/shared': 7.7.0_vue@3.2.31
       vue: 3.2.31
-      vue-demi: 0.12.1_vue@3.2.31
+      vue-demi: 0.12.5_vue@3.2.31
     dev: false
 
   /@vueuse/motion/2.0.0-beta.9_vue@3.2.31:
@@ -1356,7 +1356,7 @@ packages:
       '@vueuse/core': 7.7.0_vue@3.2.31
       popmotion: 11.0.3
       vue: 3.2.31
-      vue-demi: 0.12.1_vue@3.2.31
+      vue-demi: 0.12.5_vue@3.2.31
     dev: false
 
   /@vueuse/shared/7.7.0_vue@3.2.31:
@@ -1371,7 +1371,7 @@ packages:
         optional: true
     dependencies:
       vue: 3.2.31
-      vue-demi: 0.12.1_vue@3.2.31
+      vue-demi: 0.12.5_vue@3.2.31
     dev: false
 
   /abab/2.0.5:
@@ -5490,8 +5490,8 @@ packages:
       - stylus
     dev: true
 
-  /vue-demi/0.12.1_vue@3.2.31:
-    resolution: {integrity: sha512-QL3ny+wX8c6Xm1/EZylbgzdoDolye+VpCXRhI2hug9dJTP3OUJ3lmiKN3CsVV3mOJKwFi0nsstbgob0vG7aoIw==}
+  /vue-demi/0.12.5_vue@3.2.31:
+    resolution: {integrity: sha512-BREuTgTYlUr0zw0EZn3hnhC3I6gPWv+Kwh4MCih6QcAeaTlaIX0DwOVN0wHej7hSvDPecz4jygy/idsgKfW58Q==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
