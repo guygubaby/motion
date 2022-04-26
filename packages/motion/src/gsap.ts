@@ -6,6 +6,8 @@ import type { MaybeRef } from './types'
 import { MODIFILER_JOINER } from './constants'
 import { tryOnScopeDispose } from './utils/index'
 
+export * as rawGsap from 'gsap'
+
 /**
  * Assitant function to create a GSAP tweenvars
  * @param tweenVars - The tween vars to create
