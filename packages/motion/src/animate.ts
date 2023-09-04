@@ -41,6 +41,7 @@ export const defineDirective = (): Directive<HTMLElement | SVGElement, any> => {
     const motionInstance = useMotion(el, variantsRef)
 
     // Pass the motion instance via the local element
+    // @ts-expect-error ignore
     el[MOTION_INSTANCE_KEY] = motionInstance
 
     // Set the global state reference if the name is set through v-motion="`value`"
@@ -51,8 +52,11 @@ export const defineDirective = (): Directive<HTMLElement | SVGElement, any> => {
   const unregister = (el: HTMLElement | SVGElement, binding: DirectiveBinding) => {
     const key = Object.keys(binding.modifiers).join(MODIFILER_JOINER)
     // Cleanup the unregistered element motion instance
-    if (el[MOTION_INSTANCE_KEY])
+    // @ts-expect-error ignore
+    if (el[MOTION_INSTANCE_KEY]) {
+    // @ts-expect-error ignore
       el[MOTION_INSTANCE_KEY].stop()
+    }
     if (key)
       __del(motionState, key)
   }
