@@ -1,16 +1,3 @@
-<template>
-  <div class="flex flex-col">
-    <svg
-      ref="svgRef"
-      class="w-full h-50vh border border-solid border-gray-200 rounded-2xl"
-      @mousedown="() => size = 30"
-      @mouseup="() => size = 10"
-      @mousemove="handleMouseMove"
-    >
-      <circle fill="#ff3e00" :cx="coords.x" :cy="coords.y" :r="size" /></svg>
-  </div>
-</template>
-
 <script lang="ts" setup>
 import { useSpring } from '@bryce-loskie/motion'
 import { ref } from 'vue'
@@ -32,3 +19,16 @@ const handleMouseMove = (e: MouseEvent) => {
 
 const size = useSpring(10)
 </script>
+
+<template>
+  <div class="flex flex-col">
+    <svg
+      ref="svgRef"
+      class="w-full h-50vh border border-solid border-gray-200 rounded-2xl"
+      @mousedown="() => size = 30"
+      @mouseup="() => size = 10"
+      @mousemove="handleMouseMove"
+    >
+      <circle fill="#ff3e00" :cx="coords.x" :cy="coords.y" :r="size" /></svg>
+  </div>
+</template>

@@ -1,15 +1,8 @@
-<template>
-  <span style="text-transform: capitalize;">{{ lang }}</span>
-  <pre>
-    <code :class="`language-${props.lang}`">{{ code }}</code>
-  </pre>
-</template>
-
 <script lang="ts" setup>
 import Prism from 'prismjs'
 import { onMounted } from 'vue'
 
-type Props = {
+interface Props {
   code: string
   lang: string
 }
@@ -22,3 +15,10 @@ const init = () => {
 
 onMounted(init)
 </script>
+
+<template>
+  <span style="text-transform: capitalize;">{{ lang }}</span>
+  <pre>
+    <code :class="`language-${props.lang}`">{{ code }}</code>
+  </pre>
+</template>

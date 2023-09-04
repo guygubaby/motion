@@ -27,31 +27,34 @@ export const defineDirective = (): Directive<HTMLElement | SVGElement, any> => {
     const key = Object.keys(binding.modifiers).join(MODIFILER_JOINER)
 
     // Cleanup previous motion instance if it exists
-    if (key && motionState[key]) motionState[key].stop()
+    if (key && motionState[key])
+      motionState[key].stop()
 
     // Initialize variants with argument
     const variantsRef = ref<MotionVariants>({})
 
     // Set variants from v-motion binding
-    if (typeof binding.value === 'object') variantsRef.value = binding.value
+    if (typeof binding.value === 'object')
+      variantsRef.value = binding.value
 
     // Create motion instance
     const motionInstance = useMotion(el, variantsRef)
 
     // Pass the motion instance via the local element
-    // @ts-ignore
     el[MOTION_INSTANCE_KEY] = motionInstance
 
     // Set the global state reference if the name is set through v-motion="`value`"
-    if (key) __set(motionState, key, motionInstance)
+    if (key)
+      __set(motionState, key, motionInstance)
   }
 
   const unregister = (el: HTMLElement | SVGElement, binding: DirectiveBinding) => {
     const key = Object.keys(binding.modifiers).join(MODIFILER_JOINER)
     // Cleanup the unregistered element motion instance
-    // @ts-ignore
-    if (el[MOTION_INSTANCE_KEY]) el[MOTION_INSTANCE_KEY].stop()
-    if (key) __del(motionState, key)
+    if (el[MOTION_INSTANCE_KEY])
+      el[MOTION_INSTANCE_KEY].stop()
+    if (key)
+      __del(motionState, key)
   }
 
   return {
@@ -59,8 +62,7 @@ export const defineDirective = (): Directive<HTMLElement | SVGElement, any> => {
     created: register,
     unmounted: unregister,
 
-    // for vue2
-    // @ts-expect-error
+    // @ts-expect-error for vue2
     bind: register,
     unbind: unregister,
   }

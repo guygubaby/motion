@@ -1,3 +1,19 @@
+<script lang="ts" setup>
+import { EasingPresets, useTweened } from '@bryce-loskie/motion'
+
+const progress = useTweened(0, {
+  easing: EasingPresets.circOut,
+})
+
+const minus = () => {
+  progress.value = Math.max ((progress.value - 0.1), 0)
+}
+
+const plus = () => {
+  progress.value = Math.min ((progress.value + 0.1), 1)
+}
+</script>
+
 <template>
   <div class="flex flex-col">
     <progress class="w-full" :value="progress" />
@@ -25,19 +41,3 @@
     </div>
   </div>
 </template>
-
-<script lang="ts" setup>
-import { EasingPresets, useTweened } from '@bryce-loskie/motion'
-
-const progress = useTweened(0, {
-  easing: EasingPresets.circOut,
-})
-
-const minus = () => {
-  progress.value = Math.max ((progress.value - 0.1), 0)
-}
-
-const plus = () => {
-  progress.value = Math.min ((progress.value + 0.1), 1)
-}
-</script>

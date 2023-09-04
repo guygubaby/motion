@@ -30,12 +30,14 @@ const preprocessPaths = (path: string): string[] => path.split('/').filter(p => 
 
 const findRoute = (paths: string[], routes: IRouteItem[]): IRouteItem | null => {
   const bfs = (paths: string[], routes: IRouteItem[]): IRouteItem | null => {
-    if (paths.length === 0) return null
+    if (paths.length === 0)
+      return null
 
     const [tail, ...rest] = paths
     const route = routes.find(r => r.name === tail)
     if (route) {
-      if (paths.length === 1) return route
+      if (paths.length === 1)
+        return route
       return bfs(rest, route.children)
     }
     return null

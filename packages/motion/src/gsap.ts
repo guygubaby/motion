@@ -59,21 +59,25 @@ export const defineGsapTimelineDirective = (): Directive<HTMLElement | SVGElemen
     binding: DirectiveBinding,
   ) => {
     const key = Object.keys(binding.modifiers).join(MODIFILER_JOINER)
-    if (key && gsapTimelineRecord[key]) gsapTimelineRecord[key].kill()
+    // @ts-expect-error ignore
+    if (key && gsapTimelineRecord[key])
+      gsapTimelineRecord[key].kill()
 
     let tweenVars: GSAPTweenVars[] = []
-    if (typeof binding.value === 'object') tweenVars = binding.value
+    if (typeof binding.value === 'object')
+      tweenVars = binding.value
     const tl = useGsapTimeline(el, tweenVars)
-    // @ts-ignore
     el[TL_INSTANCE_KEY] = tl
-    if (key) __set(gsapTimelineRecord, key, tl)
+    if (key)
+      __set(gsapTimelineRecord, key, tl)
   }
 
   const unregister = (el: HTMLElement | SVGElement, binding: DirectiveBinding) => {
     const key = Object.keys(binding.modifiers).join(MODIFILER_JOINER)
-    // @ts-ignore
-    if (el[TL_INSTANCE_KEY]) el[TL_INSTANCE_KEY].kill()
-    if (key) __del(gsapTimelineRecord, key)
+    if (el[TL_INSTANCE_KEY])
+      el[TL_INSTANCE_KEY].kill()
+    if (key)
+      __del(gsapTimelineRecord, key)
   }
 
   return {
@@ -81,8 +85,7 @@ export const defineGsapTimelineDirective = (): Directive<HTMLElement | SVGElemen
     created: register,
     unmounted: unregister,
 
-    // for vue2
-    // @ts-expect-error
+    // @ts-expect-error for vue2
     bind: register,
     unbind: unregister,
   }

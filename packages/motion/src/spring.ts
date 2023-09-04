@@ -12,7 +12,7 @@ interface SpringOpts {
 
 export { spring }
 
-export const useSpring = <T=any>(value: MaybeRef<T>, opts: SpringOpts = {}): Ref<T> => {
+export const useSpring = <T = any>(value: MaybeRef<T>, opts: SpringOpts = {}): Ref<T> => {
   const dummy = shallowRef(unref(value))
   const sub = spring(dummy.value, opts)
   const unsub = sub.subscribe(val => dummy.value = val)

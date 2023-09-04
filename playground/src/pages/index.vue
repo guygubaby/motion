@@ -1,13 +1,3 @@
-<template>
-  <ul>
-    <li v-for="item in moduleList" :key="item.route">
-      <router-link :to="item.route">
-        <span style="text-transform:capitalize">{{ item.label }}</span>
-      </router-link>
-    </li>
-  </ul>
-</template>
-
 <script lang="ts" setup>
 interface IModuleItem {
   label: string
@@ -15,7 +5,6 @@ interface IModuleItem {
 }
 
 const reg = /\.\/(\w+)\/.*$/gmi
-// @ts-expect-error
 const modules = import.meta.globEager('./**/*.vue')
 
 const moduleList: IModuleItem[] = Object.keys(modules).map((key) => {
@@ -27,6 +16,16 @@ const moduleList: IModuleItem[] = Object.keys(modules).map((key) => {
   }
 }).sort((p, n) => p.label.localeCompare(n.label))
 </script>
+
+<template>
+  <ul>
+    <li v-for="item in moduleList" :key="item.route">
+      <router-link :to="item.route">
+        <span style="text-transform:capitalize">{{ item.label }}</span>
+      </router-link>
+    </li>
+  </ul>
+</template>
 
 <route lang="yaml">
 meta:
