@@ -2,65 +2,17 @@
   "name": "@bryce-loskie/motion",
   "version": "0.1.4",
   "description": "Opinionated motion util for the web",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "publishConfig": {
-    "access": "public"
-  },
-  "exports": {
-    ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
-    },
-    "./animate": {
-      "require": "./dist/animate.js",
-      "import": "./dist/animate.mjs",
-      "types": "./dist/animate.d.ts"
-    },
-    "./easing": {
-      "require": "./dist/easing.js",
-      "import": "./dist/easing.mjs",
-      "types": "./dist/easing.d.ts"
-    },
-    "./spring": {
-      "require": "./dist/spring.js",
-      "import": "./dist/spring.mjs",
-      "types": "./dist/spring.d.ts"
-    },
-    "./tweened": {
-      "require": "./dist/tweened.js",
-      "import": "./dist/tweened.mjs",
-      "types": "./dist/tweened.d.ts"
-    },
-    "./gsap": {
-      "require": "./dist/gsap.js",
-      "import": "./dist/gsap.mjs",
-      "types": "./dist/gsap.d.ts"
-    }
-  },
-  "funding": "https://github.com/sponsors/guygubaby",
   "author": "guygubaby <guygubaby@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/guygubaby/motion/issues"
-  },
+  "funding": "https://github.com/sponsors/guygubaby",
   "homepage": "https://github.com/guygubaby/motion#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/guygubaby/motion.git",
     "directory": "packages/motion"
   },
-  "sideEffects": false,
-  "files": [
-    "dist",
-    "*.d.ts"
-  ],
-  "scripts": {
-    "dev": "pnpm build -- --watch",
-    "build": "tsup",
-    "prepublishOnly": "pnpm build"
+  "bugs": {
+    "url": "https://github.com/guygubaby/motion/issues"
   },
   "keywords": [
     "vue",
@@ -71,12 +23,53 @@
     "spring",
     "gsap"
   ],
-  "dependencies": {
-    "@bryce-loskie/utils": "^0.1.21",
-    "@vueuse/motion": "^2.0.0-beta.9",
-    "gsap": "^3.9.1",
-    "svelte": "^3.46.4",
-    "vue-demi": "latest"
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./animate": {
+      "types": "./dist/animate.d.ts",
+      "import": "./dist/animate.mjs",
+      "require": "./dist/animate.js"
+    },
+    "./easing": {
+      "types": "./dist/easing.d.ts",
+      "import": "./dist/easing.mjs",
+      "require": "./dist/easing.js"
+    },
+    "./spring": {
+      "types": "./dist/spring.d.ts",
+      "import": "./dist/spring.mjs",
+      "require": "./dist/spring.js"
+    },
+    "./tweened": {
+      "types": "./dist/tweened.d.ts",
+      "import": "./dist/tweened.mjs",
+      "require": "./dist/tweened.js"
+    },
+    "./gsap": {
+      "types": "./dist/gsap.d.ts",
+      "import": "./dist/gsap.mjs",
+      "require": "./dist/gsap.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "*.d.ts"
+  ],
+  "scripts": {
+    "dev": "pnpm build -- --watch",
+    "build": "tsup",
+    "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {
     "@vue/composition-api": "^1.4.1",
@@ -87,5 +80,12 @@
     "@vue/composition-api": {
       "optional": true
     }
+  },
+  "dependencies": {
+    "@bryce-loskie/utils": "^0.1.21",
+    "@vueuse/motion": "^2.0.0-beta.9",
+    "gsap": "^3.9.1",
+    "svelte": "^3.46.4",
+    "vue-demi": "latest"
   }
 }
